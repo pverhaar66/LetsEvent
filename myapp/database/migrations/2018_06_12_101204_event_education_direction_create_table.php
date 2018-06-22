@@ -4,17 +4,17 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class LocationCreateTable extends Migration
-{
-   	/**
+class EventEducationDirectionCreateTable extends Migration {
+
+	/**
 	 * Run the migrations.
 	 *
 	 * @return void
 	 */
 	public function up() {
-		Schema::create('location', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('name');
+		Schema::create('event_education_direction', function (Blueprint $table) {
+			$table->integer('educationdirection_id');
+			$table->integer('event_id');
 			$table->timestamps();
 		});
 	}
@@ -25,6 +25,7 @@ class LocationCreateTable extends Migration
 	 * @return void
 	 */
 	public function down() {
-		Schema::dropIfExists('location');
+		Schema::dropIfExists('event_education_direction');
 	}
+
 }

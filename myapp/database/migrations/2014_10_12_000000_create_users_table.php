@@ -15,7 +15,9 @@
 		    Schema::create('users', function (Blueprint $table) {
 			    $table->increments('id');
 			    $table->string('student_nr');
-			    $table->string('sector');
+			    $table->string('firstname');
+			    $table->string('lastname');
+			    $table->integer('education_location_id');
 			    $table->string('email')->unique();
 			    $table->string('password');
 			    $table->enum('role', ['leerling', 'leeraar']);
